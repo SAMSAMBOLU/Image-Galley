@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        section{
+            display: flex;
+            
+        
+        }
+        button{
+            margin: 20px;
+            width: 30px;
+            height: 30px;
+            align-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+    <button id="btn" onclick="prev()"><</button>
+    <img src="" alt="" srcset="" id="img">
+    <button id="btn" onclick="next()">></button>
+
+
+<script>
+    document.getElementById("img").src="./Image/4.png"
+    let index=0
+    var Images=["./Image/12.png","./Image/13.png","./Image/14.png","./Image/2.png","./Image/3.png"]
+    
+    
+    function prev() {
+        index--;
+        
+        document.getElementById('img').src=Images[index]
+        
+        if (index <= 0) {
+            index = 0
+            document.getElementById('img').src=Images[index]
+        }
+        
+
+    }
+    function next() {
+        document.getElementById('img').src=Images[index]
+        index++
+        if (index==Images.length) {
+            index=4;
+        } 
+        // console.log(index);
+    }
+</script>
+
+
+
+
+
+
+
+
+    <!-- <button id="btn" onclick="prev()"> < </button>
+    <div id="div1"><img src="" alt="" id="img"></div>
+    <button id="btn" onclick="next()">></button>
+    
+   </section>
+    <script>
+        let index = 0;
+        var Images=["./Image/13.png","./Image/13.png","./Image/14.png"]
+        document.getElementById("img").src = "./Image/13.png"
+       
+        function next() {
+            index++;
+            document.getElementById("img").src = Images[index]
+            if (index == Images.length) {
+                index = 1
+                document.getElementById("img").src = Images[index]
+            }
+            
+           
+        } -->
+
+    <!-- </script> -->
+</body>
+</html>
